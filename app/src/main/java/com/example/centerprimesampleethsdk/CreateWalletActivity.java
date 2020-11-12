@@ -24,6 +24,14 @@ public class CreateWalletActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_create_wallet);
 
+        /**
+         * Using this createWallet function user can create a wallet.
+         *
+         * @params password, Context
+         *
+         * @return walletAddress
+         */
+
         EthManager ethManager = EthManager.getInstance();
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
 
