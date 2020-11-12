@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="85dp"
+                        android:text="Enter password to wallet address"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:background="@null"
+                        android:hint="Enter your password here (6 letters)"
+                        android:minEms="6"
+                        android:singleLine="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right|bottom"
+                        android:orientation="horizontal"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/pwdIcon"
+                            android:layout_width="16dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="24dp"
+                            android:gravity="left|center_vertical"
+                            android:src="@drawable/close"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:paddingTop="8dp">
+
+                        <EditText
+                            android:id="@+id/confirmPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@null"
+                            android:hint="Confirm your password"
+                            android:minEms="6"
+                            android:singleLine="true" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="right|bottom"
+                            android:orientation="horizontal"
+                            android:paddingBottom="10dp">
+
+
+                            <ImageView
+                                android:id="@+id/pwdVIcon"
+                                android:layout_width="16dp"
+                                android:layout_height="30dp"
+                                android:layout_marginRight="24dp"
+                                android:gravity="left|center_vertical"
+                                android:src="@drawable/close"
+                                android:visibility="gone" />
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/black" />
+
+                <Button
+                    android:id="@+id/copy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:text="copy"
+                    android:textColor="@color/black"
+                    android:visibility="invisible" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:id="@+id/createWallet"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="24dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/ne_blue_btn"
+                    android:text="Create Eth Wallet Address"
+                    android:textColor="@color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

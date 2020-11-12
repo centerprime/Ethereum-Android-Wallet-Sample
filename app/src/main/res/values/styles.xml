@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">#2e0694</item>
+        <item name="colorAccent">#2e0694</item>
+        <item name="android:windowBackground">#F9F9F9</item>
+        <item name="android:windowDisablePreview">true</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+
+
+
+
+
+
+    <style name="TextStyleBNV">
+        <item name="android:textSize">14dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="TextStypeBottomNavigation">
+        <item name="android:textSize">10dp</item>
+        <item name="android:padding">0dp</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+</resources>

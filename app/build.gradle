@@ -1,0 +1,61 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.centerprimesampleethsdk"
+        minSdkVersion 26
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+project.ext {
+    retrofitVersion = "2.3.0"
+    okhttpVersion = "3.10.0"
+    supportVersion = "28.0.0"
+    web3jVersion = "3.0.1-android"
+    gethVersion = "1.7.3"
+    gsonVersion = "2.8.2"
+    rxJavaVersion = "2.1.6"
+    rxAndroidVersion = "2.1.0"
+    daggerVersion = '2.14.1'
+
+    appCompatVersion = '1.1.0'
+    designSupportVersion = '1.1.0'
+    recyclerViewVersion = '1.1.0'
+}
+
+dependencies {
+    implementation 'com.github.centerprime:Ethereum-Client-SDK:1.0.4'
+
+    implementation "io.reactivex.rxjava2:rxjava:$project.rxJavaVersion"
+    implementation "io.reactivex.rxjava2:rxandroid:$project.rxAndroidVersion"
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}

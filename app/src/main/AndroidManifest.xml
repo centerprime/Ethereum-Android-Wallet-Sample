@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.centerprimesampleethsdk">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icenter_prime_logo"
+        android:label="CenterPrime Ethereum Wallet Sample"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:screenOrientation="portrait"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CreateWalletActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+             />
+        <activity
+            android:name=".ImportWalletFromKeyStoreActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".CheckBalanceActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ExportKeyStoreActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ImportByPrivateKeyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ExportPrivateKeyActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".SendEthActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
+    </application>
+
+</manifest>
