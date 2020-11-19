@@ -59,6 +59,16 @@
             android:exported="true"
             android:screenOrientation="portrait"
             />
+        <activity
+            android:name=".CheckERCTokenBalanceActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".SendERCTokenActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>

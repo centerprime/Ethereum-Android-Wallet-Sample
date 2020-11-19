@@ -48,7 +48,7 @@ project.ext {
 }
 
 dependencies {
-    implementation 'com.github.centerprime:Ethereum-Client-SDK:1.0.4'
+    implementation 'com.github.centerprime:Ethereum-Client-SDK:1.0.7'
 
     implementation "io.reactivex.rxjava2:rxjava:$project.rxJavaVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$project.rxAndroidVersion"

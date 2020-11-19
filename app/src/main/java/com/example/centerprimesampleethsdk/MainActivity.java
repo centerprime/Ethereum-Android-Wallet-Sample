@@ -43,6 +43,12 @@ public class MainActivity extends AppCompatActivity {
         binding.sendEth.setOnClickListener(v -> {
             startActivity(new Intent(MainActivity.this, SendEthActivity.class));
         });
+        binding.checkERCTokenkBalance.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, CheckERCTokenBalanceActivity.class));
+        });
+        binding.sendERCToken.setOnClickListener(v -> {
+            startActivity(new Intent(MainActivity.this, SendERCTokenActivity.class));
+        });
 
 
     }

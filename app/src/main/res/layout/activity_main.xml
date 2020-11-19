@@ -10,15 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/secondryColorPrimary">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:orientation="vertical">
+
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -85,7 +87,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="bottom"
-                android:layout_marginTop="10dp"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -93,8 +94,7 @@
                     android:id="@+id/createBtn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="15dp"
+                    android:layout_marginBottom="10dp"
                     android:textColor="@color/colorBlack"
                     android:background="@drawable/rounded_bg"
                     android:elevation="10dp"
@@ -161,6 +161,17 @@
                     android:elevation="10dp"
                     android:textStyle="bold"
                     android:text="Check Balance" />
+                <Button
+                    android:id="@+id/checkERCTokenkBalance"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorBlack"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_bg"
+                    android:textSize="14dp"
+                    android:elevation="10dp"
+                    android:textStyle="bold"
+                    android:text="Check Token Balance" />
 
                 <Button
                     android:id="@+id/sendEth"
@@ -174,12 +185,26 @@
                     android:textStyle="bold"
                     android:text="Send Ethereum" />
 
+                <Button
+                    android:id="@+id/sendERCToken"
+                    android:layout_width="match_parent"
+                    android:textColor="@color/colorBlack"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/rounded_bg"
+                    android:textSize="14dp"
+                    android:elevation="10dp"
+                    android:textStyle="bold"
+                    android:text="Send Ethereum Token" />
+
+
 
 
             </LinearLayout>
 
 
         </LinearLayout>
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
