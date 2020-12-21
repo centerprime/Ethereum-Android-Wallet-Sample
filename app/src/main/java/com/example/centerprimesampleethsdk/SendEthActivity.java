@@ -13,6 +13,7 @@ import com.example.centerprimesampleethsdk.databinding.ActivitySendEthBinding;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.util.ArrayList;
 
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
@@ -36,6 +37,7 @@ public class SendEthActivity extends AppCompatActivity {
 
         EthManager ethManager = EthManager.getInstance();
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
+       // ethManager.init("https://ropsten.infura.io/v3/a396c3461ac048a59f389c7778f06689");
 
         binding.sendEth.setOnClickListener(v -> {
             if(!TextUtils.isEmpty(binding.address.getText().toString().trim()) && !TextUtils.isEmpty(binding.ethAmount.getText().toString().trim())

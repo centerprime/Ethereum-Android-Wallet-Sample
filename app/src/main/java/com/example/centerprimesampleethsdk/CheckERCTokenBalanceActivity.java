@@ -22,6 +22,7 @@ public class CheckERCTokenBalanceActivity extends AppCompatActivity {
 
         EthManager ethManager = EthManager.getInstance();
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
+        //ethManager.init("https://ropsten.infura.io/v3/a396c3461ac048a59f389c7778f06689");
         binding.checkBtn.setOnClickListener(v -> {
 
             String walletAddress = binding.address.getText().toString().trim();

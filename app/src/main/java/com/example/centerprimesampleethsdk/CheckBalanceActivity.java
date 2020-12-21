@@ -37,7 +37,7 @@ public class CheckBalanceActivity extends AppCompatActivity {
                 address = "0x" + address;
             }
 
-            ethManager.balanceInEth(address)
+            ethManager.balanceInEth(address, this)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(balance -> {
