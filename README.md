@@ -23,6 +23,3 @@ This app demonstrates wallet features which contains examples of:
 ### 2. Screenshots
 [![Main-screen.jpg](https://i.postimg.cc/VsFJF0jN/Main-screen.jpg)](https://postimg.cc/F17FrRCt)
 
-[![Create-Wallet.jpg](https://i.postimg.cc/L50RbS9x/Create-Wallet.jpg)](https://postimg.cc/YLgJvJmF)
-
-[![Import-Keystore.jpg](https://i.postimg.cc/mkrBjksc/Import-Keystore.jpg)](https://postimg.cc/k6L0XnD9)
