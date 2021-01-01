@@ -1,4 +1,4 @@
-# ETH-Wallet-Android-Sample
+# Ethereum Android Wallet Sample
 
 ## Overview 
 
