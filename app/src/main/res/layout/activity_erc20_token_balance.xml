@@ -63,7 +63,7 @@
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/white"
             android:layout_gravity="center"
-            android:text="Check Balance"/>
+            android:text="Check ERC20 Token Balance"/>
     </LinearLayout>
 
 </layout>

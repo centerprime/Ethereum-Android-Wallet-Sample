@@ -49,7 +49,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="10dp"
-                android:text="21000"
+                android:text="50000"
                 android:layout_weight="1"
                 android:background="@null"
                 android:hint="Gas limit"
@@ -85,6 +85,15 @@
             android:layout_marginEnd="20dp"
             android:hint="Enter receiver wallet address"
             android:textColor="@color/black" />
+        <EditText
+            android:id="@+id/contractAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:hint="Enter contract address"
+            android:textColor="@color/black" />
 
         <TextView
             android:id="@+id/result"
@@ -108,7 +117,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:text="Send ERC Token"
+            android:text="Send ERC20 Token"
             android:background="@drawable/rounded_bg"
             android:backgroundTint="@color/colorPrimary"
             android:textColor="@color/white"/>

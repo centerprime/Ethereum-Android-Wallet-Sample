@@ -35,7 +35,8 @@ public class SendERCTokenActivity extends AppCompatActivity {
             if (!TextUtils.isEmpty(binding.address.getText().toString().trim()) && !TextUtils.isEmpty(binding.ethAmount.getText().toString().trim())
                     && !TextUtils.isEmpty(binding.gasLimit.getText().toString().trim())
                     && !TextUtils.isEmpty(binding.receiverAddress.getText().toString().trim())
-                    && !TextUtils.isEmpty(binding.password.getText().toString().trim())) {
+                    && !TextUtils.isEmpty(binding.password.getText().toString().trim())
+                    && !TextUtils.isEmpty(binding.contractAddress.getText().toString().trim()) ) {
 
                 String walletAddress = binding.address.getText().toString();
                 String password = binding.password.getText().toString();
@@ -43,7 +44,7 @@ public class SendERCTokenActivity extends AppCompatActivity {
                 BigInteger gasLimit = new BigInteger(binding.gasLimit.getText().toString());
                 BigDecimal tokenAmount = new BigDecimal(binding.ethAmount.getText().toString().trim());
                 String receiverAddress = binding.receiverAddress.getText().toString().trim();
-                String erc20TokenContractAddress = "0x913903bD683914288FDaa812cC2f51F243cCC731";
+                String erc20TokenContractAddress = binding.contractAddress.getText().toString().trim();
 
                 /**
                  * Using this sendToken function you can send ethereum from walletAddress to another walletAddress.

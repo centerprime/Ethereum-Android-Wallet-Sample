@@ -171,7 +171,7 @@
                     android:textSize="14dp"
                     android:elevation="10dp"
                     android:textStyle="bold"
-                    android:text="Check Token Balance" />
+                    android:text="Check ERC20 Token Balance" />
 
                 <Button
                     android:id="@+id/sendEth"
@@ -195,7 +195,7 @@
                     android:textSize="14dp"
                     android:elevation="10dp"
                     android:textStyle="bold"
-                    android:text="Send Ethereum Token" />
+                    android:text="Send ERC20 Token" />
 
 
 
