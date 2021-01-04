@@ -48,7 +48,6 @@ public class ExportPrivateKeyActivity extends AppCompatActivity {
                     .subscribe(privatekey -> {
 
                         binding.privateKey.setText(privatekey);
-
                         binding.copy.setVisibility(View.VISIBLE);
 
                     }, error -> {

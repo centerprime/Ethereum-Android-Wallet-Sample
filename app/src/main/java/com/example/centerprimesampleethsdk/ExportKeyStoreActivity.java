@@ -51,12 +51,10 @@ public class ExportKeyStoreActivity extends AppCompatActivity {
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(keystore -> {
 
-
                         binding.keystoreT.setVisibility(View.VISIBLE);
                         binding.copy.setVisibility(View.VISIBLE);
                         binding.keystoreT.setText(keystore);
                         hideKeyboard(this);
-
 
                     }, error -> {
                         Toast.makeText(this, "Please insert valid wallet address", Toast.LENGTH_SHORT).show();

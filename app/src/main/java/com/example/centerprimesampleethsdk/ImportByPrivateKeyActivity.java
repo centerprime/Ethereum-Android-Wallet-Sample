@@ -3,6 +3,7 @@ package com.example.centerprimesampleethsdk;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
@@ -35,21 +36,23 @@ public class ImportByPrivateKeyActivity extends AppCompatActivity {
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
 
         binding.checkBtn.setOnClickListener(v -> {
-            String privateKey = binding.privateKey.getText().toString();
-            ethManager.importFromPrivateKey(privateKey, this)
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(walletAddress -> {
+            if( !TextUtils.isEmpty(binding.privateKey.getText().toString())) {
+                String privateKey = binding.privateKey.getText().toString();
+                ethManager.importFromPrivateKey(privateKey, this)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(walletAddress -> {
 
-                        binding.address.setText(walletAddress);
-                        binding.copyBtn.setVisibility(View.VISIBLE);
+                            binding.address.setText(walletAddress);
+                            binding.copyBtn.setVisibility(View.VISIBLE);
 
-                      //  Toast.makeText(this, "Wallet Address : " + walletAddress, Toast.LENGTH_SHORT).show();
+                        }, error -> {
+                            Toast.makeText(this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
+            } else {
+                Toast.makeText(this, "Please provide private key!", Toast.LENGTH_SHORT).show();
+            }
 
-                    }, error -> {
-                        Toast.makeText(this, error.getMessage(), Toast.LENGTH_SHORT).show();
-                       // Toast.makeText(this, "Please insert valid private key.", Toast.LENGTH_SHORT).show();
-                    });
         });
 
         binding.copyBtn.setOnClickListener(v -> {

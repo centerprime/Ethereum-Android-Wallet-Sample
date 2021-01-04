@@ -49,11 +49,8 @@ public class CreateWalletActivity extends AppCompatActivity {
                     .subscribe(walletAddress -> {
 
                         binding.address.setText("0x" + walletAddress.getAddress());
-
                         binding.copy.setVisibility(View.VISIBLE);
-
                         System.out.println(walletAddress);
-
 
                     }, error -> {
 

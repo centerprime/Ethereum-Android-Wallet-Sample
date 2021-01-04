@@ -1,6 +1,7 @@
 package com.example.centerprimesampleethsdk;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Toast;
 
@@ -37,20 +38,25 @@ public class CheckBalanceActivity extends AppCompatActivity {
                 address = "0x" + address;
             }
 
-            ethManager.balanceInEth(address, this)
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(balance -> {
+            if( !TextUtils.isEmpty(balanceBinding.address.getText().toString())) {
+                ethManager.balanceInEth(address, this)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(balance -> {
 
-                        balanceBinding.balanceTxt.setText("Eth balance: " + balance.toString());
-                        balanceBinding.balanceTxt.setVisibility(View.VISIBLE);
-                     //   Toast.makeText(this, "Eth Balance : " + balance, Toast.LENGTH_SHORT).show();
+                            balanceBinding.balanceTxt.setText("Eth balance: " + balance.toString());
+                            balanceBinding.balanceTxt.setVisibility(View.VISIBLE);
 
-                    }, error -> {
-                        balanceBinding.balanceTxt.setVisibility(View.INVISIBLE);
-                        Toast.makeText(this, "Please insert valid address.", Toast.LENGTH_SHORT).show();
+                        }, error -> {
+                            balanceBinding.balanceTxt.setVisibility(View.INVISIBLE);
+                            Toast.makeText(this, "Please insert valid address.", Toast.LENGTH_SHORT).show();
 
-                    });
+                        });
+            }else {
+                Toast.makeText(this, "Please provide wallet address", Toast.LENGTH_SHORT).show();
+            }
+
+
         });
     }
 }

@@ -36,7 +36,6 @@ public class ImportWalletFromKeyStoreActivity extends AppCompatActivity {
         EthManager ethManager = EthManager.getInstance();
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
 
-
         binding.importBtn.setOnClickListener(v -> {
             String password = binding.password.getText().toString();
             String keystore = binding.keystoreT.getText().toString();
@@ -47,7 +46,6 @@ public class ImportWalletFromKeyStoreActivity extends AppCompatActivity {
 
                         binding.walletAddress.setText(walletAddress);
                         binding.copy.setVisibility(View.VISIBLE);
-                       // Toast.makeText(this, "Wallet Address : " + walletAddress, Toast.LENGTH_SHORT).show();
 
                     }, error -> {
                         Toast.makeText(this, "Please insert valid password and keystore.", Toast.LENGTH_SHORT).show();

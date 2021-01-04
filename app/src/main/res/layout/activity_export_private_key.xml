@@ -45,17 +45,28 @@
             android:id="@+id/copy"
             android:layout_gravity="center"
             android:text="copy"
-            android:textColor="@color/black"
-            android:visibility="invisible"/>
+            android:visibility="invisible"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <Button
+            android:layout_marginBottom="40dp"
             android:layout_marginTop="20dp"
             android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginRight="24dp"
+            android:layout_marginLeft="24dp"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorBlack"
             android:layout_gravity="center"
-            android:text="Export private key"/>
+            android:text="Export private key"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 </layout>

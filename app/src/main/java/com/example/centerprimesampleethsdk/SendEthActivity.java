@@ -37,7 +37,6 @@ public class SendEthActivity extends AppCompatActivity {
 
         EthManager ethManager = EthManager.getInstance();
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
-       // ethManager.init("https://ropsten.infura.io/v3/a396c3461ac048a59f389c7778f06689");
 
         binding.sendEth.setOnClickListener(v -> {
             if(!TextUtils.isEmpty(binding.address.getText().toString().trim()) && !TextUtils.isEmpty(binding.ethAmount.getText().toString().trim())
@@ -47,7 +46,6 @@ public class SendEthActivity extends AppCompatActivity {
 
                 String walletAddress = binding.address.getText().toString();
                 String password = binding.password.getText().toString();
-            //    BigInteger gasPrice = new BigInteger(String.valueOf(ethManager.getGasPrice()));
                 BigInteger gasPrice = new BigInteger("30000000000");
                 BigInteger gasLimit = new BigInteger(binding.gasLimit.getText().toString());
                 BigDecimal etherAmount = new BigDecimal(binding.ethAmount.getText().toString().trim());

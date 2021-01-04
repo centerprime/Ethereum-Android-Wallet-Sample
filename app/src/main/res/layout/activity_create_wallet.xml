@@ -123,7 +123,9 @@
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
                     android:text="copy"
-                    android:textColor="@color/black"
+                    android:background="@drawable/rounded_bg"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
                     android:visibility="invisible" />
 
                 <View
@@ -137,6 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="24dp"
                     android:layout_marginTop="40dp"
+                    android:layout_gravity="center"
                     android:layout_marginRight="24dp"
                     android:layout_marginBottom="40dp"
                     android:background="@drawable/ne_blue_btn"

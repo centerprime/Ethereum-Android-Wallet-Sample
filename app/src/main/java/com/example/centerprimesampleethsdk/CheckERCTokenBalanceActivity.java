@@ -1,6 +1,7 @@
 package com.example.centerprimesampleethsdk;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -15,30 +16,46 @@ import io.reactivex.schedulers.Schedulers;
 
 public class CheckERCTokenBalanceActivity extends AppCompatActivity {
     ActivityErc20TokenBalanceBinding binding;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_erc20_token_balance);
+
+        /**
+         * Using this getTokenBalance function you can check balance of provided walletAddress with smart contract.
+         *
+         * @params walletAddress, password, contract address
+         *
+         * @return balance
+         */
 
         EthManager ethManager = EthManager.getInstance();
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
         //ethManager.init("https://ropsten.infura.io/v3/a396c3461ac048a59f389c7778f06689");
         binding.checkBtn.setOnClickListener(v -> {
 
-            String walletAddress = binding.address.getText().toString().trim();
-            String password = binding.walletPassword.getText().toString().trim();
-            String erc20TokenContractAddress = "0x913903bD683914288FDaa812cC2f51F243cCC731";
-            ethManager.getTokenBalance(walletAddress, password, erc20TokenContractAddress, this)
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(balance -> {
+            if (!TextUtils.isEmpty(binding.address.getText().toString())
+                    && !TextUtils.isEmpty(binding.walletPassword.getText().toString())
+                    && !TextUtils.isEmpty(binding.contractAddress.getText().toString())) {
 
-                        binding.balanceTxt.setText("Token Balance :" + balance.toString());
-                        Toast.makeText(this, "Token Balance : " + balance, Toast.LENGTH_SHORT).show();
+                String walletAddress = binding.address.getText().toString().trim();
+                String password = binding.walletPassword.getText().toString().trim();
+                String erc20TokenContractAddress = binding.contractAddress.getText().toString().trim();
+                ethManager.getTokenBalance(walletAddress, password, erc20TokenContractAddress, this)
+                        .subscribeOn(Schedulers.io())
+                        .observeOn(AndroidSchedulers.mainThread())
+                        .subscribe(balance -> {
 
-                    }, error -> {
-                        Toast.makeText(this, error.getMessage(), Toast.LENGTH_SHORT).show();
-                    });
+                            binding.balanceTxt.setText("Token Balance :" + balance.toString());
+
+                        }, error -> {
+                            Toast.makeText(this, error.getMessage(), Toast.LENGTH_SHORT).show();
+                        });
+            } else {
+                Toast.makeText(this, "Fill fields!", Toast.LENGTH_SHORT).show();
+            }
+
         });
     }
 }

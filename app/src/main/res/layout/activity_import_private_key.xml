@@ -33,21 +33,32 @@
             android:id="@+id/copyBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="10dp"
-            android:visibility="invisible"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="@color/colorPrimary"
             android:text="Copy"
-            android:layout_gravity="center"/>
+            android:textColor="@color/white"
+            android:visibility="invisible" />
 
-
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <Button
-            android:layout_marginTop="20dp"
             android:id="@+id/checkBtn"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/colorBlack"
             android:layout_gravity="center"
-            android:text="Import wallet address"/>
+            android:layout_marginLeft="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="40dp"
+            android:background="@drawable/rounded_bg"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="Import wallet address"
+            android:textColor="@color/white" />
     </LinearLayout>
 
 </layout>

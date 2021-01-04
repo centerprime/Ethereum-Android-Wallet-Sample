@@ -51,7 +51,6 @@ public class SendERCTokenActivity extends AppCompatActivity {
 
                             Toast.makeText(this, "TX : " + tx, Toast.LENGTH_SHORT).show();
 
-
                         }, error -> {
                             Toast.makeText(this, error.getMessage(), Toast.LENGTH_SHORT).show();
                             System.out.println("Error: " + error.getMessage());
