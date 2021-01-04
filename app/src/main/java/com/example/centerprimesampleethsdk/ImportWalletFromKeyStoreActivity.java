@@ -25,29 +25,38 @@ public class ImportWalletFromKeyStoreActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_import_wallet_keystore);
 
-        /**
-         * Using this importFromKeyStore function user can import his wallet from keystore.
-         *
-         * @params keystore, password, Context
-         *
-         * @return walletAddress
-         */
-
         EthManager ethManager = EthManager.getInstance();
+        /**
+         * Initialize infura
+         */
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
 
         binding.importBtn.setOnClickListener(v -> {
+            /**
+             * Using this importFromKeyStore function user can import his wallet from keystore.
+             *
+             * @param keystore - keystore JSON file
+             * @param password - password of provided keystore
+             * @param Context - activity context
+             *
+             * @return walletAddress
+             */
             String password = binding.password.getText().toString();
             String keystore = binding.keystoreT.getText().toString();
             ethManager.importFromKeystore(keystore, password, this)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(walletAddress -> {
-
+                        /**
+                         * if function successfully completes result can be caught in this block
+                         */
                         binding.walletAddress.setText(walletAddress);
                         binding.copy.setVisibility(View.VISIBLE);
 
                     }, error -> {
+                        /**
+                         * if function fails error can be caught in this block
+                         */
                         Toast.makeText(this, "Please insert valid password and keystore.", Toast.LENGTH_SHORT).show();
                     });
         });

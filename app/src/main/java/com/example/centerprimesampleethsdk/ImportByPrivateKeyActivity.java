@@ -19,34 +19,42 @@ import io.reactivex.schedulers.Schedulers;
 
 public class ImportByPrivateKeyActivity extends AppCompatActivity {
     ActivityImportPrivateKeyBinding binding;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_import_private_key);
 
-        /**
-         * Using this importFromPrivateKey function user can import his wallet from its private key.
-         *
-         * @params privateKey, Context
-         *
-         * @return walletAddress
-         */
-
         EthManager ethManager = EthManager.getInstance();
+        /**
+         * Initialize infura
+         */
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
 
         binding.checkBtn.setOnClickListener(v -> {
-            if( !TextUtils.isEmpty(binding.privateKey.getText().toString())) {
+            if (!TextUtils.isEmpty(binding.privateKey.getText().toString())) {
                 String privateKey = binding.privateKey.getText().toString();
+                /**
+                 * Using this importFromPrivateKey function user can import his wallet from its private key.
+                 *
+                 * @params privateKey, Context
+                 *
+                 * @return walletAddress
+                 */
                 ethManager.importFromPrivateKey(privateKey, this)
                         .subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread())
                         .subscribe(walletAddress -> {
-
+                            /**
+                             * if function successfully completes result can be caught in this block
+                             */
                             binding.address.setText(walletAddress);
                             binding.copyBtn.setVisibility(View.VISIBLE);
 
                         }, error -> {
+                            /**
+                             * if function fails error can be caught in this block
+                             */
                             Toast.makeText(this, error.getMessage(), Toast.LENGTH_SHORT).show();
                         });
             } else {

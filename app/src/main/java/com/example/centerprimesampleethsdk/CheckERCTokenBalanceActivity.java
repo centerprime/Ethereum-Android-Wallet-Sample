@@ -25,14 +25,18 @@ public class CheckERCTokenBalanceActivity extends AppCompatActivity {
         /**
          * Using this getTokenBalance function you can check balance of provided walletAddress with smart contract.
          *
-         * @params walletAddress, password, contract address
+         * @param walletAddress - which user want to check it's balance
+         * @param password - password of provided password
+         * @param contractAddress - contract address of token
          *
          * @return balance
          */
 
         EthManager ethManager = EthManager.getInstance();
+        /**
+         * Initialize infura
+         */
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
-        //ethManager.init("https://ropsten.infura.io/v3/a396c3461ac048a59f389c7778f06689");
         binding.checkBtn.setOnClickListener(v -> {
 
             if (!TextUtils.isEmpty(binding.address.getText().toString())
