@@ -27,7 +27,7 @@ public class ImportByPrivateKeyActivity extends AppCompatActivity {
 
         EthManager ethManager = EthManager.getInstance();
         /**
-         * Initialize infura
+         * @param infura - Initialize infura
          */
         ethManager.init("https://mainnet.infura.io/v3/a396c3461ac048a59f389c7778f06689");
 
