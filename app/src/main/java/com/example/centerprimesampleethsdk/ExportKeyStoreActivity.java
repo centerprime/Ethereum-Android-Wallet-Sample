@@ -50,7 +50,7 @@ public class ExportKeyStoreActivity extends AppCompatActivity {
              * @return if the function is completed successfully returns keyStore JSON file or error name
              */
 
-            ethManager.getKeyStore(walletAddress, this)
+            ethManager.exportKeyStore(walletAddress, this)
                     .subscribeOn(Schedulers.io())
                     .observeOn(AndroidSchedulers.mainThread())
                     .subscribe(keystore -> {
