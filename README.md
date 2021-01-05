@@ -4,10 +4,10 @@
 
 This app demonstrates wallet features which contains examples of: 
   - Create Wallet
+  - Export Keystore  
+  - Export Private Key
   - Import Wallet By Keystore
   - Import Wallet By Private Key
-  - Export Keystore
-  - Export Private Key
   - Ethereum Balance
   - ERC20 token balance
   - Send Ether
@@ -21,5 +21,5 @@ This app demonstrates wallet features which contains examples of:
 - Build and Run this application on Android Studio. 
 
 ### 2. Screenshots
-[![Main-screen.jpg](https://i.postimg.cc/VsFJF0jN/Main-screen.jpg)](https://postimg.cc/F17FrRCt)
+[![Main-screen.jpg](https://i.postimg.cc/htzB5dKH/main.jpg)](https://postimg.cc/LJpwqhYT)
 
