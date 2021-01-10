@@ -3,8 +3,8 @@
 ## Overview 
 
 This app demonstrates wallet features which contains examples of: 
-  - Create Wallet(#create-wallet)
-  - Export Keystore(#export-keystore)
+  - [Create Wallet](#create-wallet)
+  - [Export Keystore](#export-keystore)
   - Export Private Key
   - Import Wallet By Keystore
   - Import Wallet By Private Key
