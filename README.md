@@ -21,5 +21,5 @@ This app demonstrates wallet features which contains examples of:
 - Build and Run this application on Android Studio. 
 
 ### 2. Screenshots
-[![Main-screen.jpg](https://i.postimg.cc/htzB5dKH/main.jpg)](https://postimg.cc/LJpwqhYT)
+[![eth-main-screen.png](https://i.postimg.cc/7LBFFFG0/0-eth-main-screen.png)](https://postimg.cc/qt3DnZGv)
 
