@@ -23,32 +23,32 @@ This app demonstrates wallet features which contains examples of:
 ### 2. Screenshots
 
 #### Main Screen
-[![eth-main-screen.png](https://i.postimg.cc/7LBFFFG0/0-eth-main-screen.png)](https://postimg.cc/qt3DnZGv)
+<img src="https://centerprime.technology/images/github/ethereum/main_screen.png">
 
 #### Create Wallet 
-[![1-Create-wallet.png](https://i.postimg.cc/KjPt2bm3/1-Create-wallet.png)](https://postimg.cc/Wq4dGQFs)
+<img src="https://centerprime.technology/images/github/ethereum/create_wallet.png">
 
 #### Export Keystore
-[![2-Export-keystore.png](https://i.postimg.cc/xTPLp9sW/2-Export-keystore.png)](https://postimg.cc/gnnwnbbD)
+<img src="https://centerprime.technology/images/github/ethereum/export_keystore.png">
 
 #### Export Private Key
-[![3-Export-Private-key.png](https://i.postimg.cc/nV4mMHtC/3-Export-Private-key.png)](https://postimg.cc/SjKRvbRh)
+<img src="https://centerprime.technology/images/github/ethereum/export_private_key.png">
 
 #### Import Wallet By Keystore
-[![4-Import-Keystore.png](https://i.postimg.cc/hvcfVdqh/4-Import-Keystore.png)](https://postimg.cc/G8gLC9t1)
+<img src="https://centerprime.technology/images/github/ethereum/import_wallet_by_keystore.png">
 
 #### Import Wallet By Private Key
-[![5-Import-Private-key.png](https://i.postimg.cc/FKSRqZr7/5-Import-Private-key.png)](https://postimg.cc/rd8MR5tk)
+<img src="https://centerprime.technology/images/github/ethereum/import_wallet_by_private_key.png">
 
 #### Ethereum Balance
-[![6-check-balance.png](https://i.postimg.cc/xCSCSz8g/6-check-balance.png)](https://postimg.cc/DWBFrmqb)
+<img src="https://centerprime.technology/images/github/ethereum/check_balance.png">
 
 #### ERC20 Token Balance
-[![7-Check-token-balance.png](https://i.postimg.cc/V6BNskbw/7-Check-token-balance.png)](https://postimg.cc/cgCWXZmk)
+<img src="https://centerprime.technology/images/github/ethereum/check_token_balance.png">
 
 #### Send Ether
-[![8-Send-Ether.png](https://i.postimg.cc/C5hxRpjq/8-Send-Ether.png)](https://postimg.cc/zbQrQM2z)
+<img src="https://centerprime.technology/images/github/ethereum/send_ether.png">
 
 #### Send ERC20 Token
-[![9-Send-erc20-token.png](https://i.postimg.cc/Df6ztmTd/9-Send-erc20-token.png)](https://postimg.cc/Bt8sFStX)
+<img src="https://centerprime.technology/images/github/ethereum/send_erc20_token.png">
 
